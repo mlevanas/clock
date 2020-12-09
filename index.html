@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="lt-LT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Digital Analog Clock</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+	<header class="header">
+	</header>
+
+<main class="main">
+    <div class="clockbox">
+        <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+            <g id="face">
+                <circle class="circle" cx="300" cy="300" r="253.9"/>
+                <path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6"/>
+                <circle class="mid-circle" cx="300" cy="300" r="16.2"/>
+            </g>
+            <g id="hour">
+                <path class="hour-arm" d="M300.5 298V142"/>
+                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+            </g>
+            <g id="minute">
+                <path class="minute-arm" d="M300.5 298V67"/>
+                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+            </g>
+            <g id="second">
+                <path class="second-arm" d="M300.5 350V55"/>
+                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+            </g>
+			<g id="numbers">
+				<text id="number_12" class="numbers_main" x="285" y="120" stroke="black" stroke-width="4" font-size="2em">12</text>
+				<text id="number_1" class="numbers_other" x="400" y="140" stroke="black" stroke-width="4" font-size="2em">1</text>
+				<text id="number_2" class="numbers_other" x="470" y="210" stroke="black"  stroke-width="4" font-size="2em">2</text>
+				<text id="number_3" class="numbers_main" x="480" y="310" stroke="black"  stroke-width="4" font-size="2em">3</text>
+				<text id="number_4" class="numbers_other" x="470" y="410" stroke="black"  stroke-width="4" font-size="2em">4</text>
+				<text id="number_5" class="numbers_other" x="400" y="480" stroke="black" stroke-width="4" font-size="2em">5</text>
+				<text id="number_6" class="numbers_main" x="295" y="500" stroke="black" stroke-width="4" font-size="2em">6</text>
+				<text id="number_7" class="numbers_other" x="190" y="480" stroke="black" stroke-width="4" font-size="2em">7</text>
+				<text id="number_8" class="numbers_other" x="115" y="410" stroke="black"  stroke-width="4" font-size="2em">8</text>
+				<text id="number_9" class="numbers_main" x="105" y="310" stroke="black"  stroke-width="4" font-size="2em">9</text>
+				<text id="number_10" class="numbers_other" x="115" y="210" stroke="black"  stroke-width="4" font-size="2em">10</text>
+				<text id="number_11" class="numbers_other" x="190" y="140" stroke="black" stroke-width="4" font-size="2em">11</text>
+			</g>
+        </svg>
+    </div><!-- .clockbox -->
+	<br>
+	<div id="digital_clock">
+		Valandos: <input id="hour-val" onchange="run_the_clock()" type="number" min="0" max="23">
+		Minutės: <input id="minut-val" onchange="run_the_clock()" type="number" min="0" max="59">
+		Sekundės: <input id="sec-val" onchange="run_the_clock()" type="number" min="0" max="59">
+	</div>
+	<div>
+		<label for="show-seconds">
+			Rodyti sekundininką
+		<input type="checkbox" onclick="toggle_secundes()" checked id="show-seconds" name="show-seconds">	
+		</label>
+		<br>
+		<label for="show-minutes">
+			Rodyti minutininką
+		<input type="checkbox" onclick="toggle_minutes()" checked id="show-minutes" name="show-minutes">	
+		</label>
+
+		<fieldset>
+			<input type="checkbox" checked name="show_numbers" onclick="toggle_numbers()">
+			<label for="show_numbers">
+				Rodyti skaičius
+			</label>
+			<legend>Skaičiai</legend>
+
+			<input type="radio" name="numbers_type" id="numbers_type="arabic" onclick="set_arabic_numbers()">
+			<label for="numbers">
+				Arabiški
+			</label>
+
+			<input type="radio" name="numbers_type" id="numbers_type_roman" onclick="set_roman_numbers()" cheked>
+			<label for="numbers">
+				Romėniški
+			</label>
+			<br>
+			<br>
+			<input type="radio" name="numbers" onclick="show_only_main_numbers()">
+			<label for="numbers">
+				Rodyti tik pagrindinius skaičius
+			</label>
+			<input type="radio" name="numbers" checked onclick="show_all_numbers()">
+			<label for="numbers">
+				Rodyti visus skaičius
+			</label>
+		</fieldset>
+	</div>
+</main>
+
+</body>
+
+</html>
