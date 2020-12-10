@@ -2,7 +2,7 @@
 .main {
     display: flex;
     padding: 2em;
-    height: 90vh;
+    height: 80vh;
     justify-content: center;
     align-items: middle;
 }
@@ -63,4 +63,13 @@
 #second {
     transform-origin: 300px 300px;
     /*transition: transform .5s ease-in-out;*/
+}
+
+#digital-clock input[type="number"]
+{
+	font-size: 50px;
+}
+
+.digital-clock{
+
 }

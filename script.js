@@ -4,7 +4,6 @@ const HOURHAND = document.querySelector("#hour");
 const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
 
-
 function run_the_clock(){
   var date = new Date();
   let hr = document.getElementById('hour-val').value; //date.getHours();
@@ -16,10 +15,15 @@ function run_the_clock(){
   let minPosition = (min * 360/60) + (sec* 360/60)/60;
   let secPosition = sec * 360/60;
 
+	hr_degrees = hrPosition;
+	min_degrees = minPosition;
+	sec_degrees = secPosition;
   //Then we need to apply these numbers as degrees in the inline styles for transform on each of the objects.
   HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
   MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
   SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
+
+	console.log(`h_position: ${hrPosition} m_position: ${minPosition} s_position: ${secPosition}`);
 }
 
 run_the_clock();
@@ -45,11 +49,18 @@ function toggle_numbers()
 	numbers.style.display = (numbers.style.display == '') ? 'none' : '';
 }
 
+function toggle_digital_clock()
+{
+	let clock = document.getElementById('digital-clock');
+	clock.style.display = (clock.style.display == '') ? 'none' : '';
+}
+
 function show_only_main_numbers()
 {
 	let other_numbers = document.querySelectorAll('.numbers_other');
 	let main_numbers = document.querySelectorAll('.numbers_main');
 
+	
 	other_numbers.forEach(el => { el.style.display = 'none'; });
 	main_numbers.forEach(el => { el.style.display = ''; });
 }
@@ -63,35 +74,66 @@ function show_all_numbers()
 	main_numbers.forEach(el => { el.style.display = ''; });
 }
 
+const HOURS = 12;
 function set_roman_numbers()
 {
-	document.getElementById('number_1').innerHTML = 'I';
-	document.getElementById('number_2').innerHTML = 'II';
-	document.getElementById('number_3').innerHTML = 'III';
-	document.getElementById('number_4').innerHTML = 'IV';
-	document.getElementById('number_5').innerHTML = 'V';
-	document.getElementById('number_6').innerHTML = 'VI';
-	document.getElementById('number_7').innerHTML = 'VII';
-	document.getElementById('number_8').innerHTML = 'VIII';
-	document.getElementById('number_9').innerHTML = 'IX';
-	document.getElementById('number_10').innerHTML = 'X';
-	document.getElementById('number_11').innerHTML = 'XI';
-	document.getElementById('number_12').innerHTML = 'XII';
+	let roman_numbers = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
+	for(let i = 0; i < 	HOURS; i++){
+		document.getElementById('number_' + (i + 1)).innerHTML = roman_numbers[i];
+	}
 	console.log('text changed to roman');
 }
 
 function set_arabic_numbers()
 {
-	document.getElementById('number_1').innerHTML = '1';
-	document.getElementById('number_2').innerHTML = '2';
-	document.getElementById('number_3').innerHTML = '3';
-	document.getElementById('number_4').innerHTML = '4';
-	document.getElementById('number_5').innerHTML = '5';
-	document.getElementById('number_6').innerHTML = '6';
-	document.getElementById('number_7').innerHTML = '7';
-	document.getElementById('number_8').innerHTML = '8';
-	document.getElementById('number_9').innerHTML = '9';
-	document.getElementById('number_10').innerHTML = '10';
-	document.getElementById('number_11').innerHTML = '11';
-	document.getElementById('number_12').innerHTML = '12';
+	let i = 0;
+	for(; i < 	HOURS; ++i){
+		let cls = 'number_' + (i + 1);
+		document.getElementById(cls).innerHTML = (i + 1);
+	}
+}
+
+function set_color(inp, _class)
+{
+	let arm = document.querySelector(_class);
+	arm.style.stroke = inp.value;
+}
+
+function set_clock(deg)
+{
+	let values = {
+		0: {h: 12, m: 0},
+		30 : {h: 1, m: 5},
+		60 : {h: 2, m: 10},
+		90 : {h: 3, m: 15},
+		120 : {h: 4, m: 20},
+		150 : {h: 5, m: 25},
+		180 : {h: 6, m: 30},
+		210 : {h: 7, m: 35},
+		240 : {h: 8, m: 40},
+		270 : {h: 9, m: 45},
+		300 : {h: 10, m: 50},
+		330 : {h: 11, m: 55},
+	};
+
+	console.log(deg);
+	let selected_arrow = document.getElementById('hand_set');
+	switch(selected_arrow.selectedOptions[0].value)
+	{
+		case 'h':
+			HOURHAND.style.transform = `rotate(${deg}deg)`;
+			document.getElementById('hour-val').value = values[deg].h;
+			run_the_clock();
+			break;
+		case 'm':
+			MINUTEHAND.style.transform = `rotate(${deg}deg)`;
+			document.getElementById('minut-val').value = values[deg].m;
+			run_the_clock();
+			break;
+		case 's':
+			SECONDHAND.style.transform = `rotate(${deg}deg)`;
+			document.getElementById('sec-val').value = values[deg].m;
+			run_the_clock();
+			break;
+	}
 }
