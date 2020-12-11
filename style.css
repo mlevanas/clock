@@ -1,54 +1,125 @@
-.header{
-	display: flex;
-}
-
-.numbers_main, .numbers_other{
-	fill: white;
-	stroke-width: 1;
-	font-size: 3em;
-	stroke: white;
-}
-
-.header h1{
+.title{
 	text-transform: uppercase;
-	font-size: 72px;
-	font-style: tahoma;
+	font-weight: bold;
+	text-align: end;
 }
 
-.header input[type="radio"]{
-	display: block;
-	height: 4em;
-	width: 4em;
-	border-radius: 5%;
+.title .plestas{
+	letter-spacing: 13px;
 }
 
-.header #spalva1{
-	background-color: red;
+.color-container-column{
+	display:flex;
+	align-items; center;
 }
 
-/* Layout */
-.main {
-    display: flex;
-    padding: 2em;
-    height: 80vh;
-    justify-content: center;
-    align-items: middle;
+.select-color{
+	width: 60px;
+	height: 60px;
 }
 
-.main .ciferblatas{
-	position: relative;
-	top: 245px;
-	right: 922px;
-	z-index: -1;
-	width: 360px;
-	height: 360px;
+.select-arrow{
+	width: 60px;
+	height: 60px;
+	background-color: white;
+	margin: 10px;
+	border-radius: 10px;
 }
 
-.clockbox,
-#clock {
-    width: 100%;
+.color-container{
+	display: flex;
+	background-color: #ebedec;
+	border-radius: 5px;
+	align-items: center;
+	width: 100%;
+	margin-top: 20px;
+	height: 70px;
 }
 
+.color-container div{
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.color-container .orange{
+	background-color: #ef7f1b;
+}
+
+.color-container .yellow{
+	background-color: #ffcc01;
+}
+
+.color-container .blue{
+	background-color: #01a0e2;
+}
+
+.color-container .pink{
+	background-color: #a92683;
+}
+
+.color-container .lightpink{
+	background-color: #e5194a;
+}
+
+.color-container .label{
+	text-transform: uppercase;
+}
+
+.settings{
+	display: flex;
+	align-items: center;
+	margin: 5px;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+.settings-container{
+	height: 100px;
+	margin-top: 50%;
+	margin-bottom: 50%; 
+}
+
+.settings-container .select-color{
+	background-color: white;
+       	border-radius: 5px;
+       	margin: 10px;
+}
+
+#hours-input{
+	border-right-style: hidden;
+	border-top: solid 15px black;
+	border-left: solid 15px black;
+	border-bottom: solid 15px black;
+	border-top-left-radius: 10%;
+	border-bottom-left-radius: 10%;
+}
+
+#minutes-input{
+	border-right-style: hidden;
+	border-top: solid 15px black;
+	border-left: hidden;
+	border-bottom: solid 15px black;
+}
+
+#seconds-input{
+	border-left: hidden;
+	border-top: solid 15px black;
+	border-right: solid 15px black;
+	border-bottom: solid 15px black;
+	border-top-right-radius: 10%;
+	border-bottom-right-radius: 10%;
+}
+
+.time-input{
+	font-size: 40px;
+	font-weight: bold;
+	width: 20%;
+}
+
+/*input formar*/
 /* Clock styles */
 .circle {
     fill: none;
@@ -93,6 +164,10 @@
     fill: none;
 }
 
+#numbers text{
+	stroke: #ffffff;
+}
+
 /* Make all arms rotate around the same center point. */
 /* Optional: Use transition for animation. */
 #hour,
@@ -100,13 +175,4 @@
 #second {
     transform-origin: 300px 300px;
     /*transition: transform .5s ease-in-out;*/
-}
-
-#digital-clock input[type="number"]
-{
-	font-size: 50px;
-}
-
-#numbers text{
-	cursor: pointer;
 }

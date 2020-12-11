@@ -5,10 +5,10 @@ const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
 
 function run_the_clock(){
-  var date = new Date();
-  let hr = document.getElementById('hour-val').value; //date.getHours();
-  let min = document.getElementById('minut-val').value; //date.getMinutes();
-  let sec = document.getElementById('sec-val').value; //date.getSeconds();
+ // var date = new Date();
+  let hr = document.getElementById('hours-input').value; //date.getHours();
+  let min = document.getElementById('minutes-input').value; //date.getMinutes();
+  let sec = document.getElementById('seconds-input').value; //date.getSeconds();
   console.log("Hour: "+hr+ " Minute: "+ min + " Second: "+ sec);
 
   let hrPosition = hr*360/12 + ((min * 360/60)/12);
@@ -31,11 +31,25 @@ run_the_clock();
 function toggle_secundes()
 {
 	toggle_hand(SECONDHAND);
+	toggle_checkbox('seconds-toggle-svg');
 }
 
 function toggle_minutes()
 {
 	toggle_hand(MINUTEHAND);
+	toggle_checkbox('minutes-toggle-svg');
+}
+
+function toggle_hours()
+{
+	toggle_hand(HOURHAND);
+	toggle_checkbox('hours-toggle-svg');
+}
+
+function toggle_checkbox(checbox_id)
+{
+	let el = document.getElementById(checbox_id);
+	el.style.display = (el.style.display == '') ? 'none' : '';
 }
 
 function toggle_hand(hand)
@@ -137,3 +151,37 @@ function set_clock(deg)
 			break;
 	}
 }
+
+function change_color(el, color_code)
+{
+	let title = document.querySelector('.title');
+	title.style.color = color_code;
+
+	let clock = document.querySelector('.circle');
+	clock.style.stroke = color_code;
+
+	let settings = document.querySelectorAll('.settings');
+	settings.forEach((s) => { s.style.backgroundColor = color_code; });
+
+	let checkboxes = document.querySelectorAll('.select-color svg');
+	checkboxes.forEach((c) => { c.style.display = 'none'; }); //paslepk visus checkboxus
+	el.getElementsByTagName('svg')[0].style.display = '';
+
+	let hours_input = document.querySelector('#hours-input');
+	hours_input.style.borderTop = 'solid 15px ' + color_code;
+	hours_input.style.borderLeft = 'solid 15px ' + color_code;
+	hours_input.style.borderBottom = 'solid 15px ' + color_code;
+
+	let minutes_input = document.querySelector('#minutes-input');
+	minutes_input.style.borderTop = 'solid 15px ' + color_code;
+	minutes_input.style.borderBottom = 'solid 15px ' + color_code;
+
+	let second_input = document.querySelector('#seconds-input');
+	second_input.style.borderTop = 'solid 15px ' + color_code;
+	second_input.style.borderRight = 'solid 15px ' + color_code;
+	second_input.style.borderBottom = 'solid 15px ' + color_code;
+
+}
+
+let blue = document.querySelectorAll('.select-color')[0];
+change_color(blue, '#01a0e2');

@@ -11,126 +11,142 @@
 </head>
 
 <body>
-	<header class="header">
-		<h1>Mokomės pažinti laiką</h1>
-		<input type="radio" value="#e5194a" name="color" id="spalva1">
-		<input type="radio" value="#01a0e2" name="color" id="spalva2">
-		<input type="radio" value="#ffcc01" name="color" id="spalva3">
-		<input type="radio" value="#ef7f1b" name="color" id="spalva4">
-		<input type="radio" value="#a92683" name="color" id="spalva5">
-		Spalva
-	</header>
 
-<main class="main">
-    <div class="clockbox">
-	<img class="ciferblatas" id="ciferblatas-pilnas" src="ciferblatas-kopija.png" style="">
-	<img class="ciferblatas" id="ciferblatas-nepilnas" src="ciferblatas-2.png" style="">
-        <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
-            <g id="face">
-                <circle class="circle" cx="300" cy="300" r="205"/>
-                <circle class="mid-circle" cx="300" cy="300" r="11.2"/>
-            </g>
-			<g id="hour" draggable="true">
-                <path class="hour-arm" d="M300.5 298V182"/>
-                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
-            </g>
-            <g id="minute">
-                <path class="minute-arm" d="M300.5 298V150"/>
-                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
-            </g>
-            <g id="second">
-                <path class="second-arm" d="M300.5 350V145" stroke="red"/>
-                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
-            </g>
-			<g id="numbers">
-				<text onclick="set_clock(0)" id="number_12" class="numbers_main" x="285" y="110" stroke="black" stroke-width="4" font-size="2em">12</text>
-				<text onclick="set_clock(30)" id="number_1" class="numbers_other" x="400" y="140" stroke="black" stroke-width="4" font-size="2em">1</text>
-				<text onclick="set_clock(60)" id="number_2" class="numbers_other" x="470" y="210" stroke="black"  stroke-width="4" font-size="2em">2</text>
-				<text onclick="set_clock(90)" id="number_3" class="numbers_main" x="490" y="310" stroke="black"  stroke-width="4" font-size="2em">3</text>
-				<text onclick="set_clock(120)" id="number_4" class="numbers_other" x="470" y="410" stroke="black"  stroke-width="4" font-size="2em">4</text>
-				<text onclick="set_clock(150)" id="number_5" class="numbers_other" x="400" y="495" stroke="black" stroke-width="4" font-size="2em">5</text>
-				<text onclick="set_clock(180)" id="number_6" class="numbers_main" x="295" y="520" stroke="black" stroke-width="4" font-size="2em">6</text>
-				<text onclick="set_clock(210)" id="number_7" class="numbers_other" x="190" y="495" stroke="black" stroke-width="4" font-size="2em">7</text>
-				<text onclick="set_clock(240)" id="number_8" class="numbers_other" x="115" y="410" stroke="black"  stroke-width="4" font-size="2em">8</text>
-				<text onclick="set_clock(270)" id="number_9" class="numbers_main" x="90" y="310" stroke="black"  stroke-width="4" font-size="2em">9</text>
-				<text onclick="set_clock(300)" id="number_10" class="numbers_other" x="115" y="210" stroke="black"  stroke-width="4" font-size="2em">10</text>
-				<text onclick="set_clock(330)" id="number_11" class="numbers_other" x="190" y="140" stroke="black" stroke-width="4" font-size="2em">11</text>
-			</g>
-			<use xlink:href="#hour"/>
-			<use xlink:href="#minute"/>
-			<use xlink:href="#second"/>
-        </svg>
-    </div><!-- .clockbox -->
-	<br>
-	<div>
-		<label for="show-seconds">
-			Sekundžių rodyklė
-		<input type="checkbox" onclick="toggle_secundes()" checked id="show-seconds" name="show-seconds">	
-		</label>
-		<br>
-		<label for="show-minutes">
-			Minučių rodyklė
-		<input type="checkbox" onclick="toggle_minutes()" checked id="show-minutes" name="show-minutes">	
-		</label>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6">
+				<h1 class="title"> <span class="plestas">Mokomės</span><br>pažinti laiką</h1>
+			</div>
+			<div class="color-container-column col-xl-6 col-xs-1">
+				<div class="color-container">
+					<div class="select-color blue" onclick="change_color(this, '#01a0e2')">
+						<svg>
+							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
+						</svg>
+					</div>
+					<div class="select-color orange" onclick="change_color(this, '#ef7f1b')">
+						<svg style="display:none">
+							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
+						</svg>
+					</div>
+					<div class="select-color yellow" onclick="change_color(this, '#ffcc01')">
+						<svg style="display: none">
+							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
+						</svg>
+					</div>
+					<div class="select-color pink" onclick="change_color(this, '#a92683')">
+						<svg style="display: none">
+							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
+						</svg>
+					</div>
+					<div class="select-color lightpink" onclick="change_color(this, '#e5194a')">
+						<svg style="display: none">
+							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
+						</svg>
+					</div>
+					<h1 class="label">
+						Spalva
+					</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-xs-1">
+				<div>
+					Vienas
+				</div>
+				<div>
+					Du
+				</div>
+				<div>
+					Trys
+				</div>
+				<div>
+					Keturi
+				</div>
+			</div>
+			<div class="col-xl-4 col-xs-1">
+				<svg id="clock" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 600 600">
 
-		<fieldset style="width: 300px">
-			<input type="checkbox" checked name="show_numbers" onclick="toggle_numbers()">
-			<label for="show_numbers">
-				Rodyti skaičius
-			</label>
-			<br>
-			<legend>Skaičiai</legend>
+					<defs>
+						<pattern id="test" width="100" height="100">
+							<image href="ciferblatas-2.png" x="300" y="300" width="100" height="100"/>
+						</pattern>
+					</defs> 
+					<g id="face">
+					<circle class="circle" cx="300" cy="300" r="205" id="other" fill="url(#test)"/>
 
-			<input type="radio" name="numbers_type" id="numbers_type_arabic" onclick="set_arabic_numbers()" checked>
-			<label for="numbers">
-				Arabiški
-			</label>
+					<circle class="mid-circle" cx="300" cy="300" r="11.2"/>
+					</g>
+					<g id="hour">
+					<path class="hour-arm" d="M300.5 298V182"/>
+					<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+					</g>
+					<g id="minute">
+					<path class="minute-arm" d="M300.5 298V150"/>
+					<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+					</g>
+					<g id="second">
+					<path class="second-arm" d="M300.5 350V145" stroke="red"/>
+					<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+					</g>
+					<g id="numbers">
+					<text onclick="set_clock(0)" id="number_12" class="numbers_main" x="285" y="110" stroke="black" stroke-width="4" font-size="2em">12</text>
+					<text onclick="set_clock(30)" id="number_1" class="numbers_other" x="400" y="140" stroke="black" stroke-width="4" font-size="2em">1</text>
+					<text onclick="set_clock(60)" id="number_2" class="numbers_other" x="470" y="210" stroke="black"  stroke-width="4" font-size="2em">2</text>
+					<text onclick="set_clock(90)" id="number_3" class="numbers_main" x="490" y="310" stroke="black"  stroke-width="4" font-size="2em">3</text>
+					<text onclick="set_clock(120)" id="number_4" class="numbers_other" x="470" y="410" stroke="black"  stroke-width="4" font-size="2em">4</text>
+					<text onclick="set_clock(150)" id="number_5" class="numbers_other" x="400" y="495" stroke="black" stroke-width="4" font-size="2em">5</text>
+					<text onclick="set_clock(180)" id="number_6" class="numbers_main" x="295" y="520" stroke="black" stroke-width="4" font-size="2em">6</text>
+					<text onclick="set_clock(210)" id="number_7" class="numbers_other" x="190" y="495" stroke="black" stroke-width="4" font-size="2em">7</text>
+					<text onclick="set_clock(240)" id="number_8" class="numbers_other" x="115" y="410" stroke="black"  stroke-width="4" font-size="2em">8</text>
+					<text onclick="set_clock(270)" id="number_9" class="numbers_main" x="90" y="310" stroke="black"  stroke-width="4" font-size="2em">9</text>
+					<text onclick="set_clock(300)" id="number_10" class="numbers_other" x="115" y="210" stroke="black"  stroke-width="4" font-size="2em">10</text>
+					<text onclick="set_clock(330)" id="number_11" class="numbers_other" x="190" y="140" stroke="black" stroke-width="4" font-size="2em">11</text>
+					</g>
+					<use xlink:href="#hour"/>
+					<use xlink:href="#minute"/>
+					<use xlink:href="#second"/>
+				</svg>
+			</div>
+			<div class="col-xl-4 col-xs-1">
+				<div class="settings-container">
+					<div class="settings" style="letter-spacing: 9px;">
+						<div class="select-arrow" onclick="toggle_hours()">
+							<svg id="hours-toggle-svg">
+								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
+							</svg>
+						</div>Laiko rodyklė
+					</div>
+					<div class="settings" style="letter-spacing: 4px;">
+						<div class="select-arrow" onclick="toggle_minutes()">
+							<svg id="minutes-toggle-svg">
+								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
+							</svg>
+						</div>Minučių rodyklė
+					</div>
 
-			<input type="radio" name="numbers_type" id="numbers_type_roman" onclick="set_roman_numbers()" cheked>
-			<label for="numbers">
-				Romėniški
-			</label>
-			<br>
-			<br>
-			<input type="radio" name="numbers" onclick="show_only_main_numbers()">
-			<label for="numbers">
-				Rodyti tik pagrindinius skaičius
-			</label><br>
-			<input type="radio" name="numbers" checked onclick="show_all_numbers()">
-			<label for="numbers">
-				Rodyti visus skaičius
-			</label>
-		</fieldset>
-
-		<fieldset>
-			<legend>Spalvos</legend>
-			<label for="color_hour">Valandų spalva</label>
-			<input type="color" id="color_hour" oninput="set_color(this, '.hour-arm')"><br>
-			<label for="color_min">Minučių spalva</label>
-			<input type="color" id="color_min" oninput="set_color(this, '.minute-arm')"><br>
-			<label for="color_sec">Sekundžių spalva</label>
-			<input type="color" id="color_sec" oninput="set_color(this, '.second-arm')">
-		</fieldset>
-
-		<fieldset>
-			<legend>
-				Nustatyti ranka
-			</legend>
-			<label>Nustatyti</label>
-			<select id="hand_set">
-				<option value="h">Valandas</option>
-				<option value="m">Minutes</option>
-				<option value="s">Sekundes</option>
-			</select>
-		</fieldset>
+					<div class="settings">
+						<div class="select-arrow" onclick="toggle_secundes()">
+							<svg id="seconds-toggle-svg">
+								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
+							</svg>
+						</div>Sekundžių rodyklė
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-1">
+				<div class="text-center">
+					<input onchange="run_the_clock()" class="time-input" type="number" id="hours-input" min="0" max="24">
+					<input onchange="run_the_clock()" class="time-input" type="number" id="minutes-input">
+					<input onchange="run_the_clock()" class="time-input" type="number" id="seconds-input">
+				</div>
+			</div>
+		</div>
 	</div>
-</main>
-<input type="checkbox" onclick="toggle_digital_clock()" checked>Rodyti skaitmeninį laikrodį
-<div id="digital-clock">
-	Valandos: <input id="hour-val" onchange="run_the_clock()" type="number" min="0" max="23">
- 	Minutės: <input id="minut-val" onchange="run_the_clock()" type="number" min="0" max="59">
- 	Sekundės: <input id="sec-val" onchange="run_the_clock()" type="number" min="0" max="59">
-</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous"></script>
 </body>
 
