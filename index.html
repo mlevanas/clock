@@ -7,57 +7,69 @@
     <title>Analoginis laikrodis</title>
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" />
 </head>
 
 <body>
 	<header class="header">
+		<h1>Mokomės pažinti laiką</h1>
+		<input type="radio" value="#e5194a" name="color" id="spalva1">
+		<input type="radio" value="#01a0e2" name="color" id="spalva2">
+		<input type="radio" value="#ffcc01" name="color" id="spalva3">
+		<input type="radio" value="#ef7f1b" name="color" id="spalva4">
+		<input type="radio" value="#a92683" name="color" id="spalva5">
+		Spalva
 	</header>
 
 <main class="main">
     <div class="clockbox">
+	<img class="ciferblatas" id="ciferblatas-pilnas" src="ciferblatas-kopija.png" style="">
+	<img class="ciferblatas" id="ciferblatas-nepilnas" src="ciferblatas-2.png" style="">
         <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
             <g id="face">
-                <circle class="circle" cx="300" cy="300" r="253.9"/>
-                <path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6"/>
-                <circle class="mid-circle" cx="300" cy="300" r="16.2"/>
+                <circle class="circle" cx="300" cy="300" r="205"/>
+                <circle class="mid-circle" cx="300" cy="300" r="11.2"/>
             </g>
 			<g id="hour" draggable="true">
-                <path class="hour-arm" d="M300.5 298V142"/>
+                <path class="hour-arm" d="M300.5 298V182"/>
                 <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
             </g>
             <g id="minute">
-                <path class="minute-arm" d="M300.5 298V67"/>
+                <path class="minute-arm" d="M300.5 298V150"/>
                 <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
             </g>
             <g id="second">
-                <path class="second-arm" d="M300.5 350V55"/>
+                <path class="second-arm" d="M300.5 350V145" stroke="red"/>
                 <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
             </g>
 			<g id="numbers">
-				<text onclick="set_clock(0)" id="number_12" class="numbers_main" x="285" y="120" stroke="black" stroke-width="4" font-size="2em">12</text>
+				<text onclick="set_clock(0)" id="number_12" class="numbers_main" x="285" y="110" stroke="black" stroke-width="4" font-size="2em">12</text>
 				<text onclick="set_clock(30)" id="number_1" class="numbers_other" x="400" y="140" stroke="black" stroke-width="4" font-size="2em">1</text>
 				<text onclick="set_clock(60)" id="number_2" class="numbers_other" x="470" y="210" stroke="black"  stroke-width="4" font-size="2em">2</text>
-				<text onclick="set_clock(90)" id="number_3" class="numbers_main" x="480" y="310" stroke="black"  stroke-width="4" font-size="2em">3</text>
+				<text onclick="set_clock(90)" id="number_3" class="numbers_main" x="490" y="310" stroke="black"  stroke-width="4" font-size="2em">3</text>
 				<text onclick="set_clock(120)" id="number_4" class="numbers_other" x="470" y="410" stroke="black"  stroke-width="4" font-size="2em">4</text>
-				<text onclick="set_clock(150)" id="number_5" class="numbers_other" x="400" y="480" stroke="black" stroke-width="4" font-size="2em">5</text>
-				<text onclick="set_clock(180)" id="number_6" class="numbers_main" x="295" y="500" stroke="black" stroke-width="4" font-size="2em">6</text>
-				<text onclick="set_clock(210)" id="number_7" class="numbers_other" x="190" y="480" stroke="black" stroke-width="4" font-size="2em">7</text>
+				<text onclick="set_clock(150)" id="number_5" class="numbers_other" x="400" y="495" stroke="black" stroke-width="4" font-size="2em">5</text>
+				<text onclick="set_clock(180)" id="number_6" class="numbers_main" x="295" y="520" stroke="black" stroke-width="4" font-size="2em">6</text>
+				<text onclick="set_clock(210)" id="number_7" class="numbers_other" x="190" y="495" stroke="black" stroke-width="4" font-size="2em">7</text>
 				<text onclick="set_clock(240)" id="number_8" class="numbers_other" x="115" y="410" stroke="black"  stroke-width="4" font-size="2em">8</text>
-				<text onclick="set_clock(270)" id="number_9" class="numbers_main" x="105" y="310" stroke="black"  stroke-width="4" font-size="2em">9</text>
+				<text onclick="set_clock(270)" id="number_9" class="numbers_main" x="90" y="310" stroke="black"  stroke-width="4" font-size="2em">9</text>
 				<text onclick="set_clock(300)" id="number_10" class="numbers_other" x="115" y="210" stroke="black"  stroke-width="4" font-size="2em">10</text>
 				<text onclick="set_clock(330)" id="number_11" class="numbers_other" x="190" y="140" stroke="black" stroke-width="4" font-size="2em">11</text>
 			</g>
+			<use xlink:href="#hour"/>
+			<use xlink:href="#minute"/>
+			<use xlink:href="#second"/>
         </svg>
     </div><!-- .clockbox -->
 	<br>
 	<div>
 		<label for="show-seconds">
-			Rodyti sekundes
+			Sekundžių rodyklė
 		<input type="checkbox" onclick="toggle_secundes()" checked id="show-seconds" name="show-seconds">	
 		</label>
 		<br>
 		<label for="show-minutes">
-			Rodyti minutes
+			Minučių rodyklė
 		<input type="checkbox" onclick="toggle_minutes()" checked id="show-minutes" name="show-minutes">	
 		</label>
 
@@ -69,7 +81,7 @@
 			<br>
 			<legend>Skaičiai</legend>
 
-			<input type="radio" name="numbers_type" id="numbers_type_arabic" onclick="set_arabic_numbers()" >
+			<input type="radio" name="numbers_type" id="numbers_type_arabic" onclick="set_arabic_numbers()" checked>
 			<label for="numbers">
 				Arabiški
 			</label>
@@ -119,6 +131,7 @@
  	Minutės: <input id="minut-val" onchange="run_the_clock()" type="number" min="0" max="59">
  	Sekundės: <input id="sec-val" onchange="run_the_clock()" type="number" min="0" max="59">
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous"></script>
 </body>
 
 </html>

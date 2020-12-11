@@ -1,3 +1,31 @@
+.header{
+	display: flex;
+}
+
+.numbers_main, .numbers_other{
+	fill: white;
+	stroke-width: 1;
+	font-size: 3em;
+	stroke: white;
+}
+
+.header h1{
+	text-transform: uppercase;
+	font-size: 72px;
+	font-style: tahoma;
+}
+
+.header input[type="radio"]{
+	display: block;
+	height: 4em;
+	width: 4em;
+	border-radius: 5%;
+}
+
+.header #spalva1{
+	background-color: red;
+}
+
 /* Layout */
 .main {
     display: flex;
@@ -5,6 +33,15 @@
     height: 80vh;
     justify-content: center;
     align-items: middle;
+}
+
+.main .ciferblatas{
+	position: relative;
+	top: 245px;
+	right: 922px;
+	z-index: -1;
+	width: 360px;
+	height: 360px;
 }
 
 .clockbox,
@@ -15,8 +52,8 @@
 /* Clock styles */
 .circle {
     fill: none;
-    stroke: #000;
-    stroke-width: 9;
+    stroke: #e5194a;
+    stroke-width: 60;
     stroke-miterlimit: 10;
 }
 
@@ -26,27 +63,27 @@
 .hour-marks {
     fill: none;
     stroke: #000;
-    stroke-width: 9;
+    stroke-width: 2;
     stroke-miterlimit: 10;
 }
 
 .hour-arm {
     fill: none;
     stroke: #000;
-    stroke-width: 17;
+    stroke-width: 3;
     stroke-miterlimit: 10;
 }
 
 .minute-arm {
     fill: none;
     stroke: #000;
-    stroke-width: 11;
+    stroke-width: 3;
     stroke-miterlimit: 10;
 }
 
 .second-arm {
     fill: none;
-    stroke: #000;
+    stroke: #ff0000;
     stroke-width: 4;
     stroke-miterlimit: 10;
 }
@@ -70,6 +107,6 @@
 	font-size: 50px;
 }
 
-.digital-clock{
-
+#numbers text{
+	cursor: pointer;
 }
