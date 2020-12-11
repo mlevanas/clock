@@ -4,6 +4,12 @@ const HOURHAND = document.querySelector("#hour");
 const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
 
+HOURHAND.addEventListener('click', function() {selected_arrow = 'h'; console.log('hour-clicked'); });
+MINUTEHAND.addEventListener('click', function() {selected_arrow = 'm'; console.log('minutes-clicked'); });
+SECONDHAND.addEventListener('click', function() {selected_arrow = 's'; console.log('seconds-clickd'); });
+
+let selected_arrow = 'h';
+
 function run_the_clock(){
  // var date = new Date();
   let hr = document.getElementById('hours-input').value; //date.getHours();
@@ -131,22 +137,21 @@ function set_clock(deg)
 	};
 
 	console.log(deg);
-	let selected_arrow = document.getElementById('hand_set');
-	switch(selected_arrow.selectedOptions[0].value)
+	switch(selected_arrow)
 	{
 		case 'h':
 			HOURHAND.style.transform = `rotate(${deg}deg)`;
-			document.getElementById('hour-val').value = values[deg].h;
+			document.getElementById('hours-input').value = values[deg].h;
 			run_the_clock();
 			break;
 		case 'm':
 			MINUTEHAND.style.transform = `rotate(${deg}deg)`;
-			document.getElementById('minut-val').value = values[deg].m;
+			document.getElementById('minutes-input').value = values[deg].m;
 			run_the_clock();
 			break;
 		case 's':
 			SECONDHAND.style.transform = `rotate(${deg}deg)`;
-			document.getElementById('sec-val').value = values[deg].m;
+			document.getElementById('seconds-input').value = values[deg].m;
 			run_the_clock();
 			break;
 	}

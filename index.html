@@ -79,30 +79,30 @@
 					<circle class="mid-circle" cx="300" cy="300" r="11.2"/>
 					</g>
 					<g id="hour">
-					<path class="hour-arm" d="M300.5 298V182"/>
+					<path class="hour-arm" d="M300.5 298V182" onclick="selected_arrow = 'h';"/>
 					<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
 					</g>
 					<g id="minute">
-					<path class="minute-arm" d="M300.5 298V150"/>
+					<path class="minute-arm" d="M300.5 298V150" onclick="selected_arrow = 'm';"/>
 					<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
 					</g>
 					<g id="second">
-					<path class="second-arm" d="M300.5 350V145" stroke="red"/>
+					<path class="second-arm" d="M300.5 350V145" stroke="red" onclick="selected_arrow = 's';"/>
 					<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
 					</g>
 					<g id="numbers">
-					<text onclick="set_clock(0)" id="number_12" class="numbers_main" x="285" y="110" stroke="black" stroke-width="4" font-size="2em">12</text>
-					<text onclick="set_clock(30)" id="number_1" class="numbers_other" x="400" y="140" stroke="black" stroke-width="4" font-size="2em">1</text>
-					<text onclick="set_clock(60)" id="number_2" class="numbers_other" x="470" y="210" stroke="black"  stroke-width="4" font-size="2em">2</text>
-					<text onclick="set_clock(90)" id="number_3" class="numbers_main" x="490" y="310" stroke="black"  stroke-width="4" font-size="2em">3</text>
-					<text onclick="set_clock(120)" id="number_4" class="numbers_other" x="470" y="410" stroke="black"  stroke-width="4" font-size="2em">4</text>
-					<text onclick="set_clock(150)" id="number_5" class="numbers_other" x="400" y="495" stroke="black" stroke-width="4" font-size="2em">5</text>
-					<text onclick="set_clock(180)" id="number_6" class="numbers_main" x="295" y="520" stroke="black" stroke-width="4" font-size="2em">6</text>
-					<text onclick="set_clock(210)" id="number_7" class="numbers_other" x="190" y="495" stroke="black" stroke-width="4" font-size="2em">7</text>
-					<text onclick="set_clock(240)" id="number_8" class="numbers_other" x="115" y="410" stroke="black"  stroke-width="4" font-size="2em">8</text>
-					<text onclick="set_clock(270)" id="number_9" class="numbers_main" x="90" y="310" stroke="black"  stroke-width="4" font-size="2em">9</text>
-					<text onclick="set_clock(300)" id="number_10" class="numbers_other" x="115" y="210" stroke="black"  stroke-width="4" font-size="2em">10</text>
-					<text onclick="set_clock(330)" id="number_11" class="numbers_other" x="190" y="140" stroke="black" stroke-width="4" font-size="2em">11</text>
+					<text onclick="set_clock(0)" id="number_12" class="numbers_main" x="285" y="110" stroke="white" fill="white" stroke-width="1" font-size="3em">12</text>
+					<text onclick="set_clock(30)" id="number_1" class="numbers_other" x="400" y="140" stroke="black" stroke-width="1" font-size="3em">1</text>
+					<text onclick="set_clock(60)" id="number_2" class="numbers_other" x="470" y="210" stroke="black"  stroke-width="1" font-size="3em">2</text>
+					<text onclick="set_clock(90)" id="number_3" class="numbers_main" x="490" y="310" stroke="black"  stroke-width="1" font-size="3em">3</text>
+					<text onclick="set_clock(120)" id="number_4" class="numbers_other" x="470" y="410" stroke="black"  stroke-width="1" font-size="3em">4</text>
+					<text onclick="set_clock(150)" id="number_5" class="numbers_other" x="400" y="495" stroke="black" stroke-width="1" font-size="3em">5</text>
+					<text onclick="set_clock(180)" id="number_6" class="numbers_main" x="295" y="520" stroke="black" stroke-width="1" font-size="3em">6</text>
+					<text onclick="set_clock(210)" id="number_7" class="numbers_other" x="190" y="495" stroke="black" stroke-width="1" font-size="3em">7</text>
+					<text onclick="set_clock(240)" id="number_8" class="numbers_other" x="115" y="410" stroke="black"  stroke-width="1" font-size="3em">8</text>
+					<text onclick="set_clock(270)" id="number_9" class="numbers_main" x="90" y="310" stroke="black"  stroke-width="1" font-size="3em">9</text>
+					<text onclick="set_clock(300)" id="number_10" class="numbers_other" x="115" y="210" stroke="black"  stroke-width="1" font-size="3em">10</text>
+					<text onclick="set_clock(330)" id="number_11" class="numbers_other" x="190" y="140" stroke="black" stroke-width="1" font-size="3em">11</text>
 					</g>
 					<use xlink:href="#hour"/>
 					<use xlink:href="#minute"/>
@@ -137,8 +137,8 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-1">
-				<div class="text-center">
+			<div class="col-xl-12 col-xs-1">
+				<div class="text-center" style="">
 					<input onchange="run_the_clock()" class="time-input" type="number" id="hours-input" min="0" max="24">
 					<input onchange="run_the_clock()" class="time-input" type="number" id="minutes-input">
 					<input onchange="run_the_clock()" class="time-input" type="number" id="seconds-input">
