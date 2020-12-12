@@ -1,6 +1,7 @@
 .title{
 	text-transform: uppercase;
 	font-weight: bold;
+	min-width: 300px;
 	text-align: end;
 }
 
@@ -31,9 +32,10 @@
 	background-color: #ebedec;
 	border-radius: 5px;
 	align-items: center;
-	width: 100%;
 	margin-top: 20px;
 	height: 70px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .color-container div{
@@ -63,6 +65,7 @@
 
 .color-container .label{
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .settings{
@@ -76,10 +79,23 @@
 	text-transform: uppercase;
 }
 
-.settings-container{
-	height: 100px;
-	margin-top: 50%;
-	margin-bottom: 50%; 
+@media only screen and (max-width: 1920px){
+	.settings-container{
+		height: 252px;
+		margin-top: 50%;
+		margin-bottom: 50%; 
+		max-width: 550px;
+	}
+}
+
+
+@media only screen and (max-width: 1162px){
+	.settings-container{
+		height: 252px;
+		margin-top: 0%;
+		margin-bottom: 10%; 
+		max-width: 550px;
+	}
 }
 
 .settings-container .select-color{
@@ -102,15 +118,21 @@
 	border-top: solid 15px black;
 	border-left: hidden;
 	border-bottom: solid 15px black;
+	border-top-right-radius: 10%;
+	border-bottom-right-radius: 10%;
 }
 
 #seconds-input{
+	margin-left: 10px;
 	border-left: hidden;
 	border-top: solid 15px black;
 	border-right: solid 15px black;
+	border-left: solid 15px black;
 	border-bottom: solid 15px black;
 	border-top-right-radius: 10%;
 	border-bottom-right-radius: 10%;
+	border-bottom-left-radius: 10%;
+	border-top-left-radius: 10%;
 }
 
 .time-input{
@@ -180,4 +202,10 @@
 #second {
     transform-origin: 300px 300px;
     /*transition: transform .5s ease-in-out;*/
+}
+
+#ciferblatas{
+	transform: translate(22.3%, 21.5%) rotate(1deg);
+	width: 57%;
+	height: 57%;
 }

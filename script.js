@@ -180,9 +180,11 @@ function change_color(el, color_code)
 	let minutes_input = document.querySelector('#minutes-input');
 	minutes_input.style.borderTop = 'solid 15px ' + color_code;
 	minutes_input.style.borderBottom = 'solid 15px ' + color_code;
+	minutes_input.style.borderRight = 'solid 15px ' + color_code;
 
 	let second_input = document.querySelector('#seconds-input');
 	second_input.style.borderTop = 'solid 15px ' + color_code;
+	second_input.style.borderLeft = 'solid 15px ' + color_code;
 	second_input.style.borderRight = 'solid 15px ' + color_code;
 	second_input.style.borderBottom = 'solid 15px ' + color_code;
 

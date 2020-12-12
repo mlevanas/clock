@@ -20,27 +20,27 @@
 			<div class="color-container-column col-xl-6 col-xs-1">
 				<div class="color-container">
 					<div class="select-color blue" onclick="change_color(this, '#01a0e2')">
-						<svg>
+						<svg width="100%" height="100%" viewbox="0 5 60 60">
 							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
 						</svg>
 					</div>
 					<div class="select-color orange" onclick="change_color(this, '#ef7f1b')">
-						<svg style="display:none">
+						<svg style="display:none" width="100%" height="100%" viewbox="0 5 60 60">
 							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
 						</svg>
 					</div>
 					<div class="select-color yellow" onclick="change_color(this, '#ffcc01')">
-						<svg style="display: none">
+						<svg style="display: none" width="100%" height="100%" viewbox="0 5 60 60">
 							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
 						</svg>
 					</div>
 					<div class="select-color pink" onclick="change_color(this, '#a92683')">
-						<svg style="display: none">
+						<svg style="display: none" width="100%" height="100%" viewbox="0 5 60 60">
 							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
 						</svg>
 					</div>
 					<div class="select-color lightpink" onclick="change_color(this, '#e5194a')">
-						<svg style="display: none">
+						<svg style="display: none" width="100%" height="100%" viewbox="0 5 60 60">
 							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
 						</svg>
 					</div>
@@ -68,12 +68,8 @@
 			<div class="col-xl-4 col-xs-1">
 				<svg id="clock" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 600 600">
 
-					<defs>
-						<pattern id="test" width="100" height="100">
-							<image href="ciferblatas-2.png" x="300" y="300" width="100" height="100"/>
-						</pattern>
-					</defs> 
 					<g id="face">
+					<image href="ciferblatas.png" id="ciferblatas"/>
 					<circle class="circle" cx="300" cy="300" r="205" id="other" fill="url(#test)"/>
 
 					<circle class="mid-circle" cx="300" cy="300" r="11.2"/>
@@ -92,16 +88,16 @@
 					</g>
 					<g id="numbers">
 					<text onclick="set_clock(0)" id="number_12" class="numbers_main" x="285" y="110" stroke="white" fill="white" stroke-width="1" font-size="3em">12</text>
-					<text onclick="set_clock(30)" id="number_1" class="numbers_other" x="400" y="140" stroke="black" stroke-width="1" font-size="3em">1</text>
+					<text onclick="set_clock(30)" id="number_1" class="numbers_other" x="390" y="140" stroke="black" stroke-width="1" font-size="3em">1</text>
 					<text onclick="set_clock(60)" id="number_2" class="numbers_other" x="470" y="210" stroke="black"  stroke-width="1" font-size="3em">2</text>
 					<text onclick="set_clock(90)" id="number_3" class="numbers_main" x="490" y="310" stroke="black"  stroke-width="1" font-size="3em">3</text>
 					<text onclick="set_clock(120)" id="number_4" class="numbers_other" x="470" y="410" stroke="black"  stroke-width="1" font-size="3em">4</text>
-					<text onclick="set_clock(150)" id="number_5" class="numbers_other" x="400" y="495" stroke="black" stroke-width="1" font-size="3em">5</text>
+					<text onclick="set_clock(150)" id="number_5" class="numbers_other" x="390" y="495" stroke="black" stroke-width="1" font-size="3em">5</text>
 					<text onclick="set_clock(180)" id="number_6" class="numbers_main" x="295" y="520" stroke="black" stroke-width="1" font-size="3em">6</text>
 					<text onclick="set_clock(210)" id="number_7" class="numbers_other" x="190" y="495" stroke="black" stroke-width="1" font-size="3em">7</text>
 					<text onclick="set_clock(240)" id="number_8" class="numbers_other" x="115" y="410" stroke="black"  stroke-width="1" font-size="3em">8</text>
 					<text onclick="set_clock(270)" id="number_9" class="numbers_main" x="90" y="310" stroke="black"  stroke-width="1" font-size="3em">9</text>
-					<text onclick="set_clock(300)" id="number_10" class="numbers_other" x="115" y="210" stroke="black"  stroke-width="1" font-size="3em">10</text>
+					<text onclick="set_clock(300)" id="number_10" class="numbers_other" x="105" y="210" stroke="black"  stroke-width="1" font-size="3em">10</text>
 					<text onclick="set_clock(330)" id="number_11" class="numbers_other" x="190" y="140" stroke="black" stroke-width="1" font-size="3em">11</text>
 					</g>
 					<use xlink:href="#hour"/>
@@ -113,14 +109,14 @@
 				<div class="settings-container">
 					<div class="settings" style="letter-spacing: 9px;">
 						<div class="select-arrow" onclick="toggle_hours()">
-							<svg id="hours-toggle-svg">
+							<svg id="hours-toggle-svg" width="100%" height="100%" viewbox="0 10 60 60">
 								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
 							</svg>
 						</div>Laiko rodyklė
 					</div>
 					<div class="settings" style="letter-spacing: 4px;">
 						<div class="select-arrow" onclick="toggle_minutes()">
-							<svg id="minutes-toggle-svg">
+							<svg id="minutes-toggle-svg" width="100%" height="100%" viewbox="0 10 60 60">
 								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
 							</svg>
 						</div>Minučių rodyklė
@@ -128,7 +124,7 @@
 
 					<div class="settings">
 						<div class="select-arrow" onclick="toggle_secundes()">
-							<svg id="seconds-toggle-svg">
+							<svg id="seconds-toggle-svg" width="100%" height="100%" viewbox="0 10 60 60">
 								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
 							</svg>
 						</div>Sekundžių rodyklė
