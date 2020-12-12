@@ -3,10 +3,11 @@
 	font-weight: bold;
 	min-width: 300px;
 	text-align: end;
+	font-size: 100px;
 }
 
 .title .plestas{
-	letter-spacing: 13px;
+	letter-spacing: 27px;
 }
 
 .color-container-column{
@@ -32,7 +33,7 @@
 	background-color: #ebedec;
 	border-radius: 5px;
 	align-items: center;
-	margin-top: 20px;
+	margin-top: 100px;
 	height: 70px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -66,25 +67,28 @@
 .color-container .label{
 	text-transform: uppercase;
 	font-weight: bold;
+	margin-left: 15px;
 }
 
 .settings{
 	display: flex;
 	align-items: center;
 	margin: 5px;
-	border-radius: 5px;
+	border-radius: 10px;
 	color: white;
 	font-weight: bold;
-	font-size: 40px;
+	font-size: 1.6em;
 	text-transform: uppercase;
+	max-width: 550px;
+	max-height: 90px;
 }
 
 @media only screen and (max-width: 1920px){
 	.settings-container{
 		height: 252px;
-		margin-top: 50%;
+		margin-top: 25%;
 		margin-bottom: 50%; 
-		max-width: 550px;
+		max-width: 410px;
 	}
 }
 
@@ -94,13 +98,13 @@
 		height: 252px;
 		margin-top: 0%;
 		margin-bottom: 10%; 
-		max-width: 550px;
+		max-width: 410px;
 	}
 }
 
 .settings-container .select-color{
 	background-color: white;
-       	border-radius: 5px;
+       	border-radius: 30px;
        	margin: 10px;
 }
 
@@ -136,7 +140,7 @@
 }
 
 .time-input{
-	font-size: 40px;
+	font-size: 1.6em;
 	font-weight: bold;
 	width: 4em;
 }
