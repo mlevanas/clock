@@ -4,6 +4,10 @@ const HOURHAND = document.querySelector("#hour");
 const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
 
+const HOUR_ARROW_ARRAY = document.querySelectorAll('.hour-arrow');
+const MINUTE_ARROW_ARRAY = document.querySelectorAll('.minute-arrow');
+const SECOND_ARROW_ARRAY = document.querySelectorAll('.second-arrow');
+
 HOURHAND.addEventListener('click', function() {selected_arrow = 'h'; console.log('hour-clicked'); });
 MINUTEHAND.addEventListener('click', function() {selected_arrow = 'm'; console.log('minutes-clicked'); });
 SECONDHAND.addEventListener('click', function() {selected_arrow = 's'; console.log('seconds-clickd'); });
@@ -28,6 +32,10 @@ function run_the_clock(){
   HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
   MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
   SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
+
+	HOUR_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + hrPosition + "deg)"; });
+	MINUTE_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + minPosition + "deg)"; });
+	SECOND_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + secPosition + "deg)"; });
 
 	console.log(`h_position: ${hrPosition} m_position: ${minPosition} s_position: ${secPosition}`);
 }
