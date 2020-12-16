@@ -164,6 +164,10 @@
     stroke-miterlimit: 10;
 }
 
+.minutes-mark{
+	stroke: black;
+}
+
 .hour-arm {
     fill: none;
     stroke: #000;
@@ -193,7 +197,7 @@
     fill: none;
 }
 
-#numbers text{
+.numbers_other, .numbers_main{
 	fill: white;
 	stroke: white;
 	cursor: pointer;

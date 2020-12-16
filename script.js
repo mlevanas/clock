@@ -12,6 +12,16 @@ HOURHAND.addEventListener('click', function() {selected_arrow = 'h'; console.log
 MINUTEHAND.addEventListener('click', function() {selected_arrow = 'm'; console.log('minutes-clicked'); });
 SECONDHAND.addEventListener('click', function() {selected_arrow = 's'; console.log('seconds-clickd'); });
 
+let current_type = 0;
+let hidden_type = 2;
+
+let clock_types = {0: '1.png', 1: '2.png', 2: '3.png', 3: '4.png', 4: '5.png'}
+
+function change_clock_type(selected_el)
+{
+	//TODO sugalvoti algoritma laikrodziu keitimui
+}
+
 let selected_arrow = 'h';
 
 function run_the_clock(){
@@ -64,6 +74,13 @@ function toggle_checkbox(checbox_id)
 {
 	let el = document.getElementById(checbox_id);
 	el.style.display = (el.style.display == '') ? 'none' : '';
+}
+
+function toggle_minute_marks()
+{
+	let minute_marks = document.querySelectorAll('.minutes-mark');
+	minute_marks.forEach(mark => { mark.style.display = (mark.style.display == '') ? 'none' : '';  });
+	toggle_checkbox('minutes-marks-toggle-svg');
 }
 
 function toggle_hand(hand)
