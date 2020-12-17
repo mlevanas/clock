@@ -16,10 +16,50 @@ let current_type = 0;
 let hidden_type = 2;
 
 let clock_types = {0: '1.png', 1: '2.png', 2: '3.png', 3: '4.png', 4: '5.png'}
-
+let clock_looks = {0: '1.png', 1: '1.png', 2: '1.png', 3: '4.png', 4: '1.png' } //ciferblatai pagrindiniam laikrodziui
 function change_clock_type(selected_el)
 {
-	//TODO sugalvoti algoritma laikrodziu keitimui
+	let ciferblatas = document.getElementById('ciferblatas');
+	let old_type = ciferblatas.getAttribute('data-clockindex');
+	let new_type = selected_el.getAttribute('data-clockindex');
+
+	ciferblatas.setAttribute('data-clockindex', new_type);
+	ciferblatas.setAttribute('href', clock_looks[new_type]);
+
+	selected_el.setAttribute('href', clock_types[old_type]);
+	selected_el.setAttribute('data-clockindex', old_type);
+
+	update_looks(new_type);
+}
+
+function update_looks(clock_type)
+{
+	console.log(clock_type);
+	switch(clock_type)
+	{
+		case '0': //tik zymejimai
+			toggle_numbers('none');
+			console.log('action called');
+			break;
+		case '1': //romeniski
+			toggle_numbers('inherit');
+			show_all_numbers();
+			set_roman_numbers();
+			break;
+		case '2': //arabiski visi
+			toggle_numbers('inherit');
+			show_all_numbers();
+			set_arabic_numbers();
+			break;
+		case '3': //tuscias
+			toggle_numbers('none');
+			break;
+		case '4': //tik pagrindiniai skaiciai
+			toggle_numbers('inherit');
+			set_arabic_numbers();
+			show_only_main_numbers();
+			break;
+	}
 }
 
 let selected_arrow = 'h';
@@ -88,10 +128,10 @@ function toggle_hand(hand)
 	hand.style.display = (hand.style.display == "") ? 'none' : '';
 }
 
-function toggle_numbers()
+function toggle_numbers(display)
 {
 	let numbers = document.getElementById('numbers');
-	numbers.style.display = (numbers.style.display == '') ? 'none' : '';
+	numbers.style.display = display;
 }
 
 function toggle_digital_clock()
