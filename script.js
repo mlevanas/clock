@@ -143,7 +143,7 @@ function toggle_real_time()
 	}
 	else if(!show_real_time)
 	{
-		time_input_array.forEach(time => time.readOnly = true);
+		time_input_array.forEach(time => time.readOnly = false);
 		clearInterval(real_time_interval);
 		run_the_clock();
 	}
