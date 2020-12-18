@@ -208,14 +208,14 @@
 #minute,
 #second {
     transform-origin: 300px 300px;
-    transition: transform .5s ease-in-out;
+    /*transition: transform .5s ease-in-out;*/
 }
 
 .hour-arrow,
 .minute-arrow,
 .second-arrow{
 	transform-origin: 50% 50%;
-    transition: transform .5s ease-in-out;
+    /*transition: transform .5s ease-in-out;*/
 }
 
 #ciferblatas{
