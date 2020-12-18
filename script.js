@@ -1,5 +1,3 @@
-// Constants that won't change through the script
-// #hour - target id for hour hand in the svg
 const HOURHAND = document.querySelector("#hour");
 const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
@@ -140,6 +138,7 @@ function toggle_real_time()
 	if(show_real_time){
 		real_time_interval = setInterval(run_the_clock, 1000);
 		time_input_array.forEach(time => time.readOnly = true);
+		run_the_clock();
 	}
 	else if(!show_real_time)
 	{
