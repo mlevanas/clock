@@ -17,6 +17,9 @@ let hidden_type = 2;
 
 let clock_types = {0: '1.png', 1: '2.png', 2: '3.png', 3: '4.png', 4: '5.png'}
 let clock_looks = {0: '1.png', 1: '1.png', 2: '1.png', 3: '4.png', 4: '1.png' } //ciferblatai pagrindiniam laikrodziui
+
+let show_real_time = false;
+
 function change_clock_type(selected_el)
 {
 	let ciferblatas = document.getElementById('ciferblatas');
@@ -65,10 +68,52 @@ function update_looks(clock_type)
 let selected_arrow = 'h';
 
 function run_the_clock(){
-  let hr = document.getElementById('hours-input').value; //date.getHours();
-  let min = document.getElementById('minutes-input').value; //date.getMinutes();
-  let sec = document.getElementById('seconds-input').value; //date.getSeconds();
+	let date = new Date();
+	let hr = document.getElementById('hours-input').value; //date.getHours();
+	let min = document.getElementById('minutes-input').value; //date.getMinutes();
+	let sec = document.getElementById('seconds-input').value; //date.getSeconds();
+	if(!show_real_time)
+	{
+		validateInput();
 
+	} else if(show_real_time)
+	{
+		hr = date.getHours();
+		min = date.getMinutes();
+		sec = date.getSeconds();
+
+		document.getElementById('hours-input').value = hr;
+		document.getElementById('minutes-input').value = min;
+		document.getElementById('seconds-input').value = sec;
+	}
+
+
+
+	console.log("Hour: "+hr+ " Minute: "+ min + " Second: "+ sec);
+
+	let hrPosition = hr*360/12 + ((min * 360/60)/12);
+	let minPosition = (min * 360/60) + (sec* 360/60)/60;
+	let secPosition = sec * 360/60;
+
+	hr_degrees = hrPosition;
+	min_degrees = minPosition;
+	sec_degrees = secPosition;
+	//Then we need to apply these numbers as degrees in the inline styles for transform on each of the objects.
+	HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
+	MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
+	SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
+
+	HOUR_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + hrPosition + "deg)"; });
+	MINUTE_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + minPosition + "deg)"; });
+	SECOND_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + secPosition + "deg)"; });
+
+	console.log(`h_position: ${hrPosition} m_position: ${minPosition} s_position: ${secPosition}`);
+}
+
+//window.setInterval(run_the_clock, 1000);
+run_the_clock();
+function validateInput(hr, min, sec)
+{
 	if(hr > 23 || hr < 0)
 	{
 		alert('Jųs įvedėte neegzistuojantį laiką');
@@ -85,30 +130,26 @@ function run_the_clock(){
 		sec = 0;
 		document.getElementById('seconds-input').value = sec;
 	}
-
-
-  console.log("Hour: "+hr+ " Minute: "+ min + " Second: "+ sec);
-
-  let hrPosition = hr*360/12 + ((min * 360/60)/12);
-  let minPosition = (min * 360/60) + (sec* 360/60)/60;
-  let secPosition = sec * 360/60;
-
-	hr_degrees = hrPosition;
-	min_degrees = minPosition;
-	sec_degrees = secPosition;
-  //Then we need to apply these numbers as degrees in the inline styles for transform on each of the objects.
-  HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
-  MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
-  SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
-
-	HOUR_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + hrPosition + "deg)"; });
-	MINUTE_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + minPosition + "deg)"; });
-	SECOND_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + secPosition + "deg)"; });
-
-	console.log(`h_position: ${hrPosition} m_position: ${minPosition} s_position: ${secPosition}`);
 }
 
-run_the_clock();
+let real_time_interval = null;
+function toggle_real_time()
+{
+	let time_input_array = document.querySelectorAll('.time-input');
+	show_real_time = !show_real_time;
+	if(show_real_time){
+		real_time_interval = setInterval(run_the_clock, 1000);
+		time_input_array.forEach(time => time.readOnly = true);
+	}
+	else if(!show_real_time)
+	{
+		time_input_array.forEach(time => time.readOnly = true);
+		clearInterval(real_time_interval);
+		run_the_clock();
+	}
+
+	toggle_checkbox('real-time-toggle-svg');
+}
 
 function toggle_secundes()
 {
