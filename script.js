@@ -65,10 +65,28 @@ function update_looks(clock_type)
 let selected_arrow = 'h';
 
 function run_the_clock(){
- // var date = new Date();
   let hr = document.getElementById('hours-input').value; //date.getHours();
   let min = document.getElementById('minutes-input').value; //date.getMinutes();
   let sec = document.getElementById('seconds-input').value; //date.getSeconds();
+
+	if(hr > 23)
+	{
+		alert('Jųs įvedėte neegzistuojantį laiką');
+		hr = 12;
+		document.getElementById('hours-input').value = hr;
+	}
+	if(min > 59){
+		alert('Jųs įvedėte neegzistuojantį laiką');
+		min = 0;
+		document.getElementById('minutes-input').value = min;
+	}
+	if(sec > 59){
+		alert('Jųs įvedėte neegzistuojantį laiką');
+		sec = 0;
+		document.getElementById('seconds-input').value = sec;
+	}
+
+
   console.log("Hour: "+hr+ " Minute: "+ min + " Second: "+ sec);
 
   let hrPosition = hr*360/12 + ((min * 360/60)/12);
@@ -167,6 +185,12 @@ function set_roman_numbers()
 		document.getElementById('number_' + (i + 1)).innerHTML = roman_numbers[i];
 	}
 	console.log('text changed to roman');
+
+	//atstumti 8 desiniau
+	
+	
+	let eigth = document.querySelector('#numbers #number_8');
+	eigth.setAttribute('x', 85);
 }
 
 function set_arabic_numbers()
@@ -176,6 +200,10 @@ function set_arabic_numbers()
 		let cls = 'number_' + (i + 1);
 		document.getElementById(cls).innerHTML = (i + 1);
 	}
+
+	//atstumti 8 kairiau
+	let eigth = document.querySelector('#numbers #number_8');
+	eigth.setAttribute('x', 115);
 }
 
 function set_color(inp, _class)
