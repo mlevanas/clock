@@ -6,9 +6,9 @@ const HOUR_ARROW_ARRAY = document.querySelectorAll('.hour-arrow');
 const MINUTE_ARROW_ARRAY = document.querySelectorAll('.minute-arrow');
 const SECOND_ARROW_ARRAY = document.querySelectorAll('.second-arrow');
 
-HOURHAND.addEventListener('click', function() {selected_arrow = 'h'; console.log('hour-clicked'); });
-MINUTEHAND.addEventListener('click', function() {selected_arrow = 'm'; console.log('minutes-clicked'); });
-SECONDHAND.addEventListener('click', function() {selected_arrow = 's'; console.log('seconds-clickd'); });
+HOURHAND.addEventListener('click', function() {selected_arrow = 'h'; /*console.log('hour-clicked');*/ });
+MINUTEHAND.addEventListener('click', function() {selected_arrow = 'm'; /*/console.log('minutes-clicked');*/ });
+SECONDHAND.addEventListener('click', function() {selected_arrow = 's'; /*/console.log('seconds-clickd');*/ });
 
 let current_type = 0;
 let hidden_type = 2;
@@ -35,12 +35,11 @@ function change_clock_type(selected_el)
 
 function update_looks(clock_type)
 {
-	console.log(clock_type);
+	//console.log(clock_type);
 	switch(clock_type)
 	{
 		case '0': //tik zymejimai
 			toggle_numbers('none');
-			console.log('action called');
 			break;
 		case '1': //romeniski
 			toggle_numbers('inherit');
@@ -85,10 +84,6 @@ function run_the_clock(){
 		document.getElementById('seconds-input').value = sec;
 	}
 
-
-
-	console.log("Hour: "+hr+ " Minute: "+ min + " Second: "+ sec);
-
 	let hrPosition = hr*360/12 + ((min * 360/60)/12);
 	let minPosition = (min * 360/60) + (sec* 360/60)/60;
 	let secPosition = sec * 360/60;
@@ -105,7 +100,7 @@ function run_the_clock(){
 	MINUTE_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + minPosition + "deg)"; });
 	SECOND_ARROW_ARRAY.forEach(arrow => { arrow.style.transform = "rotate(" + secPosition + "deg)"; });
 
-	console.log(`h_position: ${hrPosition} m_position: ${minPosition} s_position: ${secPosition}`);
+	//console.log(`h_position: ${hrPosition} m_position: ${minPosition} s_position: ${secPosition}`);
 }
 
 //window.setInterval(run_the_clock, 1000);
@@ -224,7 +219,7 @@ function set_roman_numbers()
 	for(let i = 0; i < 	HOURS; i++){
 		document.getElementById('number_' + (i + 1)).innerHTML = roman_numbers[i];
 	}
-	console.log('text changed to roman');
+	//console.log('text changed to roman');
 
 	//atstumti 8 desiniau
 	
@@ -269,7 +264,7 @@ function set_clock(deg)
 		330 : {h: 11, m: 55},
 	};
 
-	console.log(deg);
+	//console.log(deg);
 	switch(selected_arrow)
 	{
 		case 'h':
