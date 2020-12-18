@@ -69,18 +69,18 @@ function run_the_clock(){
   let min = document.getElementById('minutes-input').value; //date.getMinutes();
   let sec = document.getElementById('seconds-input').value; //date.getSeconds();
 
-	if(hr > 23)
+	if(hr > 23 || hr < 0)
 	{
 		alert('Jųs įvedėte neegzistuojantį laiką');
 		hr = 12;
 		document.getElementById('hours-input').value = hr;
 	}
-	if(min > 59){
+	if(min > 59 || min < 0){
 		alert('Jųs įvedėte neegzistuojantį laiką');
 		min = 0;
 		document.getElementById('minutes-input').value = min;
 	}
-	if(sec > 59){
+	if(sec > 59 || sec < 0){
 		alert('Jųs įvedėte neegzistuojantį laiką');
 		sec = 0;
 		document.getElementById('seconds-input').value = sec;
