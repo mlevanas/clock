@@ -1,0 +1,292 @@
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  min-width: 300px;
+  text-align: center;
+}
+
+.title .plestas {
+  letter-spacing: 27px;
+}
+
+@media only screen and (min-width: 1201px) {
+  .title {
+    font-size: 4em;
+  }
+}
+
+.color-container-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.select-color {
+  width: 60px;
+  height: 60px;
+}
+
+.select-arrow {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.color-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ebedec;
+  border-radius: 5px;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.color-container div {
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.color-container .orange {
+  background-color: #ef7f1b;
+}
+
+.color-container .yellow {
+  background-color: #ffcc01;
+}
+
+.color-container .blue {
+  background-color: #01a0e2;
+}
+
+.color-container .pink {
+  background-color: #a92683;
+}
+
+.color-container .lightpink {
+  background-color: #e5194a;
+}
+
+.color-container .label {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  max-width: 550px;
+  max-height: 90px;
+}
+
+.settings-container .select-color {
+  background-color: white;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.center-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hours-input {
+  border-right-style: hidden;
+  border-top: solid 15px black;
+  border-left: solid 15px black;
+  border-bottom: solid 15px black;
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+
+#minutes-input {
+  border-right-style: hidden;
+  border-top: solid 15px black;
+  border-left: hidden;
+  border-bottom: solid 15px black;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+#seconds-input {
+  margin-left: 10px;
+  border-left: hidden;
+  border-top: solid 15px black;
+  border-right: solid 15px black;
+  border-left: solid 15px black;
+  border-bottom: solid 15px black;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-top-left-radius: 10%;
+}
+
+.time-input {
+  font-size: 1.6em;
+  font-weight: bold;
+  width: 4em;
+}
+
+/*input formar*/
+/* Clock styles */
+.circle {
+  fill: none;
+  stroke: #e5194a;
+  stroke-width: 80;
+  stroke-miterlimit: 10;
+}
+
+.mid-circle {
+  fill: #000;
+}
+
+.hour-marks {
+  fill: none;
+  stroke: #000;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+
+.minutes-mark {
+  stroke: black;
+  cursor: pointer;
+}
+
+.hour-arm {
+  fill: none;
+  stroke: #000;
+  stroke-width: 8;
+  stroke-miterlimit: 10;
+  cursor: pointer;
+}
+
+.minute-arm {
+  fill: none;
+  stroke: #000;
+  stroke-width: 8;
+  stroke-miterlimit: 10;
+  cursor: pointer;
+}
+
+.second-arm {
+  fill: none;
+  stroke: #ff0000;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  cursor: pointer;
+}
+
+/* Transparent box ensuring arms center properly. */
+.sizing-box {
+  fill: none;
+}
+
+.numbers_other, .numbers_main {
+  fill: white;
+  stroke: white;
+  cursor: pointer;
+}
+
+.hour-arrow,
+.minute-arrow,
+.second-arrow {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+#ciferblatas {
+  -webkit-transform: translate(21.6%, 21.5%);
+          transform: translate(21.6%, 21.5%);
+  width: 57%;
+  height: 57%;
+}
+
+.center-items-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mini-clocks-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .mini-clocks-grid {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .mini-clocks-grid {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    grid-column-gap: calc(33% - 480px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .mini-clocks-grid {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-column-gap: calc(33% - 480px);
+  }
+}
+
+@media (min-width: 1201px) {
+  .mini-clocks-grid {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-column-gap: calc(33%);
+  }
+}
+
+.mini-clock {
+  width: 150px;
+  height: 150px;
+}
+/*# sourceMappingURL=main.css.map */

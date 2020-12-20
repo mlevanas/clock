@@ -1,0 +1,55 @@
+.center-items-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mini-clocks-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .mini-clocks-grid {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .mini-clocks-grid {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    grid-column-gap: calc(33% - 480px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .mini-clocks-grid {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-column-gap: calc(33% - 480px);
+  }
+}
+
+@media (min-width: 1201px) {
+  .mini-clocks-grid {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-column-gap: calc(33%);
+  }
+}
+
+.mini-clock {
+  width: 150px;
+  height: 150px;
+}
+/*# sourceMappingURL=mini-clocks.css.map */

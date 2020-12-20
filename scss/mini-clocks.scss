@@ -1,0 +1,39 @@
+.center-items-row{
+    display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+
+.mini-clocks-grid{
+    display: grid;
+    grid-row-gap: 20px;
+    
+    
+
+    @media (max-width: 480px){
+        grid-template-columns: auto auto auto auto;
+        //grid-column-gap: calc(33% - 480px);
+    }
+
+    @media (min-width: 481px) and (max-width: 768px){
+        grid-template-columns: auto auto auto auto;
+        grid-column-gap: calc(33% - 480px);
+    }
+
+    @media (min-width: 769px) and (max-width: 1200px){
+        grid-template-columns: auto auto;
+        grid-column-gap: calc(33% - 480px);
+    }
+
+    @media (min-width: 1201px){
+        grid-template-columns: auto auto;
+        grid-column-gap: calc(33%);
+        //margin-left: 33%;
+    }
+}
+
+.mini-clock{
+    width: 150px;
+    height: 150px;
+}

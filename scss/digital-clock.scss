@@ -1,0 +1,39 @@
+$border_contour: solid 15px black;
+$radius: 10%;
+
+#hours-input{
+	border-right-style: hidden;
+	border-top: $border_contour;
+	border-left: $border_contour;
+	border-bottom: $border_contour;
+	border-top-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+}
+
+#minutes-input{
+	border-right-style: hidden;
+	border-top: $border_contour;
+	border-left: hidden;
+	border-bottom: $border_contour;
+	border-top-right-radius: $radius;
+	border-bottom-right-radius: $radius;
+}
+
+#seconds-input{
+	margin-left: 10px;
+	border-left: hidden;
+	border-top: $border_contour;
+	border-right: $border_contour;
+	border-left: $border_contour;
+	border-bottom: $border_contour;
+	border-top-right-radius: $radius;
+	border-bottom-right-radius: $radius;
+	border-bottom-left-radius: $radius;
+	border-top-left-radius: $radius;
+}
+
+.time-input{
+	font-size: 1.6em;
+	font-weight: bold;
+	width: 4em;
+}

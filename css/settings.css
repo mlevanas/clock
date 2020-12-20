@@ -1,0 +1,36 @@
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  max-width: 550px;
+  max-height: 90px;
+}
+
+.settings-container .select-color {
+  background-color: white;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.center-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=settings.css.map */

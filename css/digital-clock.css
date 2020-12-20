@@ -1,0 +1,37 @@
+#hours-input {
+  border-right-style: hidden;
+  border-top: solid 15px black;
+  border-left: solid 15px black;
+  border-bottom: solid 15px black;
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+
+#minutes-input {
+  border-right-style: hidden;
+  border-top: solid 15px black;
+  border-left: hidden;
+  border-bottom: solid 15px black;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+#seconds-input {
+  margin-left: 10px;
+  border-left: hidden;
+  border-top: solid 15px black;
+  border-right: solid 15px black;
+  border-left: solid 15px black;
+  border-bottom: solid 15px black;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-top-left-radius: 10%;
+}
+
+.time-input {
+  font-size: 1.6em;
+  font-weight: bold;
+  width: 4em;
+}
+/*# sourceMappingURL=digital-clock.css.map */

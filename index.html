@@ -2,239 +2,261 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Analoginis laikrodis</title>
-    <link rel="stylesheet" href="style.css" type="text/css" media="all">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Analoginis laikrodis</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="all">
+	<script src="js/script.js" defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+		integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g=="
+		crossorigin="anonymous" />
 </head>
 
 <body>
 	<div class="container-fluid">
-		<div class="row-fluid">
-			<div style="display: flex; flex-direction: row-reverse">
-				<img src="logo_antaniukas.png" width="200px" />
+		<div class="row-fluid" style="background-color: #ebedec;">
+			<div style="display: flex; flex-direction: row-reverse;">
+				<img src="assets/logo_antaniukas.png" width="300px" height="100%" />
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-6">
+	</div>
+	<div class="container">
+		<div class="row" style="justify-content: center;">
+			<div class="col-xl-6 col-xs-1">
+
 				<h1 class="title"> <span class="plestas">Mokomės</span><br>pažinti laiką</h1>
+
+
 			</div>
-			<div class="color-container-column col-xl-6 col-xs-1">
+			<div class="col-xl-6 col-xs-1 color-container-column">
 				<div class="color-container">
-					<div class="select-color blue" onclick="change_color(this, '#01a0e2')">
-						<svg width="100%" height="100%" viewbox="0 5 60 60">
-							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
-						</svg>
+					<div style="display:flex">
+						<div class="select-color blue" onclick="change_color(this, '#01a0e2')">
+							<svg width="100%" height="100%" viewbox="0 5 60 60">
+								<path d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
+							</svg>
+						</div>
+						<div class="select-color orange" onclick="change_color(this, '#ef7f1b')">
+							<svg style="display:none" width="100%" height="100%" viewbox="0 5 60 60">
+								<path d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
+							</svg>
+						</div>
+						<div class="select-color yellow" onclick="change_color(this, '#ffcc01')">
+							<svg style="display: none" width="100%" height="100%" viewbox="0 5 60 60">
+								<path d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
+							</svg>
+						</div>
+						<div class="select-color pink" onclick="change_color(this, '#a92683')">
+							<svg style="display: none" width="100%" height="100%" viewbox="0 5 60 60">
+								<path d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
+							</svg>
+						</div>
+						<div class="select-color lightpink" onclick="change_color(this, '#e5194a')">
+							<svg style="display: none" width="100%" height="100%" viewbox="0 5 60 60">
+								<path d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
+							</svg>
+						</div>
 					</div>
-					<div class="select-color orange" onclick="change_color(this, '#ef7f1b')">
-						<svg style="display:none" width="100%" height="100%" viewbox="0 5 60 60">
-							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
-						</svg>
-					</div>
-					<div class="select-color yellow" onclick="change_color(this, '#ffcc01')">
-						<svg style="display: none" width="100%" height="100%" viewbox="0 5 60 60">
-							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
-						</svg>
-					</div>
-					<div class="select-color pink" onclick="change_color(this, '#a92683')">
-						<svg style="display: none" width="100%" height="100%" viewbox="0 5 60 60">
-							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
-						</svg>
-					</div>
-					<div class="select-color lightpink" onclick="change_color(this, '#e5194a')">
-						<svg style="display: none" width="100%" height="100%" viewbox="0 5 60 60">
-							<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="white" fill="white"></path>
-						</svg>
-					</div>
-					<h1 class="label">
+					<h1 class="label" style="display: none;">
 						Spalva
 					</h1>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-4 col-xs-1">
-				<div style="margin-top: 25%">
-					<div style="display: flex; width: 100%; height: 150px;">
-						<div>
-							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
-								<g>
-									<circle cx="50" cy="50" r="2" fill="white" stroke="black" />
-									<image href="1.png" width="100px" height="100px" data-clockindex="0" onclick="change_clock_type(this)">
-								</g>
-								<g class="hour-arrow">
-									<path d="M50 30V55" stroke-width="2" stroke="black"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-								<g class="minute-arrow">
-									<path d="M50 20V55" stroke-width="2" stroke="black"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-								<g class="second-arrow">
-									<path d="M50 15V55" stroke-width="1" stroke="red"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-							</svg>
-						</div>
-						<div>
-							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
-								<g>
-									<circle cx="50" cy="50" r="2" fill="white" stroke="black" />
-									<image href="2.png" width="100px" height="100px" data-clockindex="1" onclick="change_clock_type(this)">
-								</g>
-								<g class="hour-arrow">
-									<path d="M50 30V55" stroke-width="2" stroke="black"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-								<g class="minute-arrow">
-									<path d="M50 20V55" stroke-width="2" stroke="black"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-								<g class="second-arrow">
-									<path d="M50 15V55" stroke-width="1" stroke="red"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-							</svg>
-						</div>
-					</div><!-- flex -->
-					<div style="display: flex; width: 100%; height: 150px; margin-top: 20px">
-						<div>
-							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
-								<g>
-									<circle cx="50" cy="50" r="2" fill="white" stroke="black" />
-									<image href="4.png" width="100px" height="100px" data-clockindex="3" onclick="change_clock_type(this)">
-								</g>
-								<g class="hour-arrow">
-									<path d="M50 30V55" stroke-width="2" stroke="black"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-								<g class="minute-arrow">
-									<path d="M50 20V55" stroke-width="2" stroke="black"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-								<g class="second-arrow">
-									<path d="M50 15V55" stroke-width="1" stroke="red"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-							</svg>
-						</div>
-						<div>
-							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
-								<g>
-									<circle cx="50" cy="50" r="2" fill="white" stroke="black" />
-									<image href="5.png" width="100px" height="100px" data-clockindex="4" onclick="change_clock_type(this)">
-								</g>
-								<g class="hour-arrow">
-									<path d="M50 30V55" stroke-width="2" stroke="black"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-								<g class="minute-arrow">
-									<path d="M50 20V55" stroke-width="2" stroke="black"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-								<g class="second-arrow">
-									<path d="M50 15V55" stroke-width="1" stroke="red"/>
-									<circle class="sizing-box" cx="50" cy="50" r="50"/>
-								</g>
-							</svg>
-						</div>
-					</div><!-- flex -->
+		<div class="row" style="align-items: center;">
+			<div class="col-lg-12 col-xs-1 col-xl-4">
+				<div class="mini-clocks-grid" style="margin-top: 20px">
+					<svg xmlns="http://www.w3.org/2000/svg" width="150px" height="150px" viewBox="0 0 100 100"
+						class="mini-clock">
+						<g>
+							<circle cx="50" cy="50" r="2" fill="white" stroke="black" />
+							<image href="assets/1.png" width="100px" height="100px" data-clockindex="0"
+								onclick="change_clock_type(this)">
+						</g>
+						<g class="hour-arrow">
+							<path d="M50 30V55" stroke-width="2" stroke="black" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+						<g class="minute-arrow">
+							<path d="M50 20V55" stroke-width="2" stroke="black" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+						<g class="second-arrow">
+							<path d="M50 15V55" stroke-width="1" stroke="red" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+					</svg>
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="150px" height="150px" viewBox="0 0 100 100"
+						class="mini-clock">
+						<g>
+							<circle cx="50" cy="50" r="2" fill="white" stroke="black" />
+							<image href="assets/2.png" data-clockindex="1" onclick="change_clock_type(this)"
+								width="100%" height="100%">
+						</g>
+						<g class="hour-arrow">
+							<path d="M50 30V55" stroke-width="2" stroke="black" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+						<g class="minute-arrow">
+							<path d="M50 20V55" stroke-width="2" stroke="black" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+						<g class="second-arrow">
+							<path d="M50 15V55" stroke-width="1" stroke="red" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+					</svg>
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="150px" height="150px" viewBox="0 0 100 100"
+						class="mini-clock">
+						<g>
+							<circle cx="50" cy="50" r="2" fill="white" stroke="black" />
+							<image href="assets/4.png" data-clockindex="3" onclick="change_clock_type(this)"
+								width="100%" height="100%">
+						</g>
+						<g class="hour-arrow">
+							<path d="M50 30V55" stroke-width="2" stroke="black" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+						<g class="minute-arrow">
+							<path d="M50 20V55" stroke-width="2" stroke="black" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+						<g class="second-arrow">
+							<path d="M50 15V55" stroke-width="1" stroke="red" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+					</svg>
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="150px" height="150px" viewBox="0 0 100 100"
+						class="mini-clock">
+						<g>
+							<circle cx="50" cy="50" r="2" fill="white" stroke="black" />
+							<image href="assets/5.png" data-clockindex="4" onclick="change_clock_type(this)"
+								width="100%" height="100%">
+						</g>
+						<g class="hour-arrow">
+							<path d="M50 30V55" stroke-width="2" stroke="black" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+						<g class="minute-arrow">
+							<path d="M50 20V55" stroke-width="2" stroke="black" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+						<g class="second-arrow">
+							<path d="M50 15V55" stroke-width="1" stroke="red" />
+							<circle class="sizing-box" cx="50" cy="50" r="50" />
+						</g>
+					</svg>
 				</div>
 			</div> <!-- col -->
-			<div class="col-xl-4 col-xs-1" style="height: 600px;">
-				<svg id="clock" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 600 600">
+			<div class="col-xl-4 col-xs-1">
+				<svg id="clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"
+					style="width: 100%">
 
 					<g id="face">
-						<image href="1.png" id="ciferblatas" data-clockindex="2"/>
+						<image href="assets/1.png" id="ciferblatas" data-clockindex="2" width="100%" height="100%" />
 
-						<circle class="circle" cx="300" cy="300" r="205" id="other" fill="#"f8f8f9"/>
+						<circle class="circle" cx="300" cy="300" r="205" id="other" fill="#" f8f8f9" />
 
-						<circle class="mid-circle" cx="300" cy="300" r="11.2"/>
+						<circle class="mid-circle" cx="300" cy="300" r="11.2" />
 					</g>
 					<g id="hour" class="hour-arrow">
-					<path class="hour-arm" d="M300.5 298V182" onclick="selected_arrow = 'h';"/>
-					<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+						<path class="hour-arm" d="M300.5 298V182" onclick="selected_arrow = 'h';" />
+						<circle class="sizing-box" cx="300" cy="300" r="253.9" />
 					</g>
 					<g id="minute" class="minute-arrow">
-					<path class="minute-arm" d="M300.5 298V150" onclick="selected_arrow = 'm';"/>
-					<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+						<path class="minute-arm" d="M300.5 298V150" onclick="selected_arrow = 'm';" />
+						<circle class="sizing-box" cx="300" cy="300" r="253.9" />
 					</g>
 					<g id="second" class="second-arrow">
-					<path class="second-arm" d="M300.5 350V145" stroke="red" onclick="selected_arrow = 's';"/>
-					<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+						<path class="second-arm" d="M300.5 350V145" stroke="red" onclick="selected_arrow = 's';" />
+						<circle class="sizing-box" cx="300" cy="300" r="253.9" />
 					</g>
 					<g id="numbers">
-					<text onclick="set_clock(0)" id="number_12" class="numbers_main" x="285" y="110" font-size="3em">12</text>
-					<text onclick="set_clock(30)" id="number_1" class="numbers_other" x="390" y="140" font-size="3em">1</text>
-					<text onclick="set_clock(60)" id="number_2" class="numbers_other" x="470" y="210" font-size="3em">2</text>
-					<text onclick="set_clock(90)" id="number_3" class="numbers_main" x="490" y="310" font-size="3em">3</text>
-					<text onclick="set_clock(120)" id="number_4" class="numbers_other" x="470" y="410" font-size="3em">4</text>
-					<text onclick="set_clock(150)" id="number_5" class="numbers_other" x="390" y="495" font-size="3em">5</text>
-					<text onclick="set_clock(180)" id="number_6" class="numbers_main" x="295" y="520" font-size="3em">6</text>
-					<text onclick="set_clock(210)" id="number_7" class="numbers_other" x="190" y="495" font-size="3em">7</text>
-					<text onclick="set_clock(240)" id="number_8" class="numbers_other" x="115" y="410" font-size="3em">8</text>
-					<text onclick="set_clock(270)" id="number_9" class="numbers_main" x="90" y="310" font-size="3em">9</text>
-					<text onclick="set_clock(300)" id="number_10" class="numbers_other" x="105" y="210" font-size="3em">10</text>
-					<text onclick="set_clock(330)" id="number_11" class="numbers_other" x="190" y="140" font-size="3em">11</text>
+						<text onclick="set_clock(0)" id="number_12" class="numbers_main" x="285" y="110"
+							font-size="3em">12</text>
+						<text onclick="set_clock(30)" id="number_1" class="numbers_other" x="390" y="140"
+							font-size="3em">1</text>
+						<text onclick="set_clock(60)" id="number_2" class="numbers_other" x="470" y="210"
+							font-size="3em">2</text>
+						<text onclick="set_clock(90)" id="number_3" class="numbers_main" x="490" y="310"
+							font-size="3em">3</text>
+						<text onclick="set_clock(120)" id="number_4" class="numbers_other" x="470" y="410"
+							font-size="3em">4</text>
+						<text onclick="set_clock(150)" id="number_5" class="numbers_other" x="390" y="495"
+							font-size="3em">5</text>
+						<text onclick="set_clock(180)" id="number_6" class="numbers_main" x="295" y="520"
+							font-size="3em">6</text>
+						<text onclick="set_clock(210)" id="number_7" class="numbers_other" x="190" y="495"
+							font-size="3em">7</text>
+						<text onclick="set_clock(240)" id="number_8" class="numbers_other" x="115" y="410"
+							font-size="3em">8</text>
+						<text onclick="set_clock(270)" id="number_9" class="numbers_main" x="90" y="310"
+							font-size="3em">9</text>
+						<text onclick="set_clock(300)" id="number_10" class="numbers_other" x="105" y="210"
+							font-size="3em">10</text>
+						<text onclick="set_clock(330)" id="number_11" class="numbers_other" x="190" y="140"
+							font-size="3em">11</text>
 
-					<text id="minutes-mark-0" class="minutes-mark" x="296" y="180">0</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="365" y="190">5</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="406" y="240">10</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="420" y="305">15</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="406" y="370">20</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="365" y="420">25</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="290" y="440">30</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="226" y="420">35</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="176" y="370">40</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="160" y="305">45</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="176" y="240">50</text/>
-					<text id="minutes-mark-0" class="minutes-mark" x="226" y="190">55</text/>
+						<text id="minutes-mark-0" class="minutes-mark" x="296" y="180" onclick="set_clock(0)">0</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="365" y="190" onclick="set_clock(30)">5</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="406" y="240" onclick="set_clock(60)">10</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="420" y="305" onclick="set_clock(90)">15</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="406" y="370" onclick="set_clock=set_clock(120)">20</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="365" y="420" onclick="set_clock(150)">25</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="290" y="440" onclick="set_clock(180)">30</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="226" y="420" onclick="set_clock(210)">35</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="176" y="370" onclick="set_clock(240)">40</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="160" y="305" onclick="set_clock(270)">45</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="176" y="240" onclick="set_clock(300)">50</text>
+						<text id="minutes-mark-0" class="minutes-mark" x="226" y="190" onclick="set_clock(330)">55</text>
 					</g>
-					<use xlink:href="#hour"/>
-					<use xlink:href="#minute"/>
-					<use xlink:href="#second"/>
+					<use xlink:href="#hour" />
+					<use xlink:href="#minute" />
+					<use xlink:href="#second" />
 				</svg>
 			</div>
-			<div class="col-xl-4 col-xs-1" style="margin-left: -4%">
+			<div class="col-xl-4 col-xs-1 center-items">
 				<div class="settings-container">
-					<div class="settings" style="letter-spacing: 9px;">
+					<div class="settings" style="letter-spacing: 5px;">
 						<div class="select-arrow" onclick="toggle_hours()">
 							<svg id="hours-toggle-svg" width="100%" height="100%" viewbox="0 10 60 60">
-								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
+								<path d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
 							</svg>
-						</div>Laiko rodyklė
+						</div>Valandų rodyklė
 					</div>
 					<div class="settings" style="letter-spacing: 5px;">
 						<div class="select-arrow" onclick="toggle_minutes()">
 							<svg id="minutes-toggle-svg" width="100%" height="100%" viewbox="0 10 60 60">
-								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
+								<path d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
 							</svg>
 						</div>Minučių rodyklė
 					</div>
 
 					<div class="settings" style="letter-spacing: 3px">
-						<div class="select-arrow" onclick="toggle_secundes()" >
+						<div class="select-arrow" onclick="toggle_secundes()">
 							<svg id="seconds-toggle-svg" width="100%" height="100%" viewbox="0 10 60 60">
-								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
+								<path d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
 							</svg>
 						</div>Sekundžių rodyklė
 					</div>
 
 					<div class="settings" style="letter-spacing: 6px">
-						<div class="select-arrow" onclick="toggle_minute_marks()" >
+						<div class="select-arrow" onclick="toggle_minute_marks()">
 							<svg id="minutes-marks-toggle-svg" width="100%" height="100%" viewbox="0 10 60 60">
-								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
+								<path d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
 							</svg>
 						</div>
 						Rodyti minutes
 					</div>
 
 					<div class="settings" style="letter-spacing: 3px">
-						<div class="select-arrow" onclick="toggle_real_time()" >
-							<svg id="real-time-toggle-svg" width="100%" height="100%" viewbox="0 10 60 60" style="display: none">
-								<path  d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
+						<div class="select-arrow" onclick="toggle_real_time()">
+							<svg id="real-time-toggle-svg" width="100%" height="100%" viewbox="0 10 60 60"
+								style="display: none">
+								<path d="M 14 18 L 33 46.5 L 52 27.5 L 33 37 Z" stroke="black" fill="black"></path>
 							</svg>
 						</div>
 						Rodyti realų laiką
@@ -244,10 +266,13 @@
 		</div>
 		<div class="row">
 			<div class="col-xl-12 col-xs-1">
-				<div class="text-center" style="margin-top: -7%">
-					<input onchange="run_the_clock()" class="time-input" type="number" value="12" id="hours-input" min="0" max="23">
-					<input onchange="run_the_clock()" class="time-input" type="number" value="0" id="minutes-input" style="margin-left: -15px" min="0" max="59">
-					<input onchange="run_the_clock()" class="time-input" type="number" value="0" id="seconds-input" min="0" max="59">
+				<div class="text-center">
+					<input onchange="run_the_clock()" class="time-input" type="number" value="12" id="hours-input"
+						min="0" max="23">
+					<input onchange="run_the_clock()" class="time-input" type="number" value="0" id="minutes-input"
+						style="margin-left: -15px" min="0" max="59">
+					<input onchange="run_the_clock()" class="time-input" type="number" value="0" id="seconds-input"
+						min="0" max="59">
 				</div>
 			</div>
 		</div>
@@ -255,8 +280,12 @@
 			<div class="container">Sukurta <a href="https://mobstudio.biz">www.mobstudio.biz</a></div>
 		</footer>
 	</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+		integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"
+		integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw=="
+		crossorigin="anonymous"></script>
 </body>
 
 </html>
