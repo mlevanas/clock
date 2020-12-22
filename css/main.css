@@ -161,6 +161,10 @@
   width: 4em;
 }
 
+.time-input :active {
+  border: none;
+}
+
 /*input formar*/
 /* Clock styles */
 .circle {

@@ -37,3 +37,10 @@ $radius: 10%;
 	font-weight: bold;
 	width: 4em;
 }
+
+.time-input input{
+	:active{
+
+		border: none;
+	}
+}

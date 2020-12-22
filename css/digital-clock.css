@@ -34,4 +34,8 @@
   font-weight: bold;
   width: 4em;
 }
+
+.time-input input :active {
+  border: none;
+}
 /*# sourceMappingURL=digital-clock.css.map */
