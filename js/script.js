@@ -170,9 +170,10 @@ function toggle_hand(hand) {
 	hand.style.display = (hand.style.display == "") ? 'none' : '';
 }
 
-function toggle_numbers(display) {
-	let numbers = document.getElementById('numbers');
-	numbers.style.display = display;
+function toggle_numbers(display)
+{
+	let numbers = document.querySelectorAll('.numbers_main, .numbers_other');
+	numbers.forEach(number => { number.style.display = display; });
 }
 
 function toggle_digital_clock() {
