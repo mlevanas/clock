@@ -1,4 +1,4 @@
-#hours-input {
+#hours-input, #hours-input-12 {
   border-right-style: hidden;
   border-top: solid 15px black;
   border-left: solid 15px black;
@@ -7,7 +7,7 @@
   border-bottom-left-radius: 10%;
 }
 
-#minutes-input {
+#minutes-input, #minutes-input-12 {
   border-right-style: hidden;
   border-top: solid 15px black;
   border-left: hidden;
@@ -16,7 +16,7 @@
   border-bottom-right-radius: 10%;
 }
 
-#seconds-input {
+#seconds-input, #seconds-input-12, #am-pm {
   margin-left: 10px;
   border-left: hidden;
   border-top: solid 15px black;
@@ -30,7 +30,7 @@
 }
 
 .time-input {
-  font-size: 1.6em;
+  font-size: 1.2em;
   font-weight: bold;
   width: 4em;
 }

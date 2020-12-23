@@ -276,8 +276,8 @@
 				<div class="text-center">
 					<div class="row">
 						<div class="col-xl-12 col-xs-1">
+							<label>24 valandų formatas:</label>
 							<div class="text-center">
-								<label>24 valandų formatas:</label>
 								<input onchange="run_the_clock()" class="time-input hours" type="number" value="12"
 									id="hours-input" min="0" max="23">
 								<input onchange="run_the_clock()" class="time-input minutes" type="number" value="0"
@@ -287,15 +287,22 @@
 							</div>
 						</div>
 					</div>
-					<label>12 valandų formatas:</label>
-					<input onchange="run_the_clock()" class="time-input hours" type="number" value="12" id="hours-input-12" min="0" max="23" readonly>
-
-					<input onchange="run_the_clock()" class="time-input minutes" type="number" value="0" id="minutes-input-12"
-						style="margin-left: -15px" min="0" max="59" readonly>
-
-					<input onchange="run_the_clock()" class="time-input seconds" type="number" value="0" id="seconds-input-12"
-						min="0" max="59" readonly>
-						<input type="text" readonly value="PM" class="time-input seconds" id="am-pm">
+					<div class="row">
+						<div class="col-xl-12 col-xs-1">
+							<label>12 valandų formatas:</label>
+							<div class="text-center">
+								<input onchange="run_the_clock()" class="time-input hours" type="number" value="12"
+									id="hours-input-12" min="0" max="23" readonly>
+			
+								<input onchange="run_the_clock()" class="time-input minutes" type="number" value="0"
+									id="minutes-input-12" style="margin-left: -15px" min="0" max="59" readonly>
+			
+								<input onchange="run_the_clock()" class="time-input seconds" type="number" value="0"
+									id="seconds-input-12" min="0" max="59" readonly>
+								<input type="text" readonly value="PM" class="time-input seconds" id="am-pm">						
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

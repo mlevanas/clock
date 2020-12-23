@@ -1,7 +1,7 @@
 $border_contour: solid 15px black;
 $radius: 10%;
 
-#hours-input{
+#hours-input, #hours-input-12{
 	border-right-style: hidden;
 	border-top: $border_contour;
 	border-left: $border_contour;
@@ -10,7 +10,7 @@ $radius: 10%;
 	border-bottom-left-radius: $radius;
 }
 
-#minutes-input{
+#minutes-input, #minutes-input-12{
 	border-right-style: hidden;
 	border-top: $border_contour;
 	border-left: hidden;
@@ -19,7 +19,7 @@ $radius: 10%;
 	border-bottom-right-radius: $radius;
 }
 
-#seconds-input{
+#seconds-input, #seconds-input-12, #am-pm{
 	margin-left: 10px;
 	border-left: hidden;
 	border-top: $border_contour;
@@ -33,7 +33,7 @@ $radius: 10%;
 }
 
 .time-input{
-	font-size: 1.6em;
+	font-size: 1.2em;
 	font-weight: bold;
 	width: 4em;
 }

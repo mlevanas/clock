@@ -67,12 +67,14 @@ function run_the_clock() {
 	let min = document.getElementById('minutes-input').value; //date.getMinutes();
 	let sec = document.getElementById('seconds-input').value; //date.getSeconds();
 	if (!show_real_time) {
-		validateInput();
-
+		validateInput(hr, min, sec);
+		//setClock12(hr, min, sec);
+		
 	} else if (show_real_time) {
 		hr = date.getHours();
 		min = date.getMinutes();
 		sec = date.getSeconds();
+		setClock12(hr, min, sec);
 
 		document.getElementById('hours-input').value = hr;
 		document.getElementById('minutes-input').value = min;
@@ -97,6 +99,10 @@ function run_the_clock() {
 
 	//console.log(`h_position: ${hrPosition} m_position: ${minPosition} s_position: ${secPosition}`);
 
+}
+
+function setClock12(hr, min, sec)
+{
 	document.querySelector('#hours-input-12').value = function(hr) { if(hr > 12) { return hr % 12;} else if(hr == 0) { return 12; } else if( hr <= 12 ) { return hr;} }(hr) ;
 	document.querySelector('#minutes-input-12').value = min;
 	document.querySelector('#seconds-input-12').value = sec	;
@@ -120,6 +126,7 @@ function validateInput(hr, min, sec) {
 		sec = 0;
 		document.getElementById('seconds-input').value = sec;
 	}
+	setClock12(hr, min, sec);
 }
 
 let real_time_interval = null;
