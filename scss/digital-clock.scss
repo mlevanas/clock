@@ -35,7 +35,12 @@ $radius: 10%;
 .time-input{
 	font-size: 1.2em;
 	font-weight: bold;
-	width: 4em;
+	width: 3.6em;
+}
+
+.separator{
+	//border-top: $border_contour;
+	//border-bottom: $border_contour;
 }
 
 .time-input input{

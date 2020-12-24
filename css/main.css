@@ -158,7 +158,7 @@
 .time-input {
   font-size: 1.2em;
   font-weight: bold;
-  width: 4em;
+  width: 3.6em;
 }
 
 .time-input input :active {
@@ -269,15 +269,13 @@
   .mini-clocks-grid {
     -ms-grid-columns: auto auto auto auto;
         grid-template-columns: auto auto auto auto;
-    grid-column-gap: calc(33% - 480px);
   }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .mini-clocks-grid {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    grid-column-gap: calc(33% - 480px);
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
   }
 }
 
@@ -285,12 +283,11 @@
   .mini-clocks-grid {
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
-    grid-column-gap: calc(33%);
   }
 }
 
 .mini-clock {
-  width: 150px;
+  width: 100%;
   height: 150px;
 }
 /*# sourceMappingURL=main.css.map */
